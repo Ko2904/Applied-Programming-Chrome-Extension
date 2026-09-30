@@ -9,11 +9,23 @@
   <main>
     <h1 id="clock"></h1>
     <blockquote id="quote">
-  <p id="quote-text"></p>
-  <footer id="quote-author"></footer>
-</blockquote>
+      <p id="quote-text"></p>
+      <footer id="quote-author"></footer>
+    </blockquote>
     <section id="news">News goes here</section>
   </main>
+
+  <button id="settings-btn" title="Change background">⚙</button>
+  <div id="settings-panel" hidden>
+    <h2>Background</h2>
+    <div id="presets"></div>
+    <label class="upload">
+      Upload your own image
+      <input type="file" id="upload" accept="image/*" hidden />
+    </label>
+    <button id="reset-btn">Reset to default</button>
+  </div>
+
   <script src="newtab.js"></script>
 </body>
 </html>
