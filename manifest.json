@@ -6,5 +6,6 @@
   "chrome_url_overrides": {
     "newtab": "newtab.html"
   },
-  "permissions": ["storage", "unlimitedStorage"]
+  "permissions": ["storage", "unlimitedStorage"],
+  "host_permissions": ["https://raw.githubusercontent.com/*"]
 }

@@ -100,3 +100,55 @@ function setupSettings() {
 
 applyBackground();
 setupSettings();
+
+const NEWS_URL = "https://raw.githubusercontent.com/Ko2904/Applied-Programming-Chrome-Extension/main/news.json";
+
+function renderNews(data) {
+  const list = document.getElementById("news-list");
+  list.replaceChildren();
+  data.items.forEach((item) => {
+    const wrap = document.createElement("div");
+    wrap.className = "news-item";
+
+    const link = document.createElement("a");
+    link.href = item.url;
+    link.textContent = item.headline;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+
+    const summary = document.createElement("p");
+    summary.textContent = item.summary;
+
+    const source = document.createElement("small");
+    source.textContent = item.source;
+
+    wrap.append(link, summary, source);
+    list.appendChild(wrap);
+  });
+}
+
+async function showNews() {
+  const list = document.getElementById("news-list");
+  const today = new Date().toISOString().slice(0, 10);
+  const { newsCache } = await chrome.storage.local.get("newsCache");
+
+  // Use the cache if it was already fetched today
+  if (newsCache && newsCache.fetchedOn === today) {
+    renderNews(newsCache.data);
+    return;
+  }
+
+  try {
+    const res = await fetch(NEWS_URL, { cache: "no-store" });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    await chrome.storage.local.set({ newsCache: { fetchedOn: today, data } });
+    renderNews(data);
+  } catch (err) {
+    console.error("Could not load news:", err);
+    // Fall back to the last cached news, even if it is old
+    if (newsCache) renderNews(newsCache.data);
+    else list.textContent = "News is not available right now.";
+  }
+}
+showNews();
