@@ -1,0 +1,28 @@
+name: Daily market news
+
+on:
+  schedule:
+    - cron: "30 6 * * 1-5"   # 06:30 UTC on weekdays
+  workflow_dispatch:          # lets you run it manually
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/generate-news.js
+        env:
+          NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
+      - name: Commit news.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add news.json
+          git diff --staged --quiet || git commit -m "Update daily news"
+          git push
