@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, sans-serif;
+  color: white;
+  background: #1e1e2e center / cover no-repeat;
+  text-align: center;
+}
+main { max-width: 700px; padding: 24px; }
+#clock { font-size: 4rem; margin: 0 0 16px; }
