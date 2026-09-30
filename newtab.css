@@ -16,3 +16,67 @@ main { max-width: 700px; padding: 24px; }
 #quote-text { font-size: 1.5rem; font-style: italic; margin: 0 0 8px; }
 #quote-author { opacity: 0.8; }
 #quote-author::before { content: "— "; }
+
+/* Dark overlay so text stays readable on any image */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: -1;
+}
+
+#settings-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+}
+#settings-btn:hover { background: rgba(255, 255, 255, 0.35); }
+
+#settings-panel {
+  position: fixed;
+  bottom: 76px;
+  right: 20px;
+  width: 260px;
+  padding: 16px;
+  border-radius: 12px;
+  background: rgba(20, 20, 30, 0.85);
+  backdrop-filter: blur(10px);
+  text-align: left;
+}
+#settings-panel[hidden] { display: none; }
+#settings-panel h2 { margin: 0 0 12px; font-size: 1rem; }
+
+#presets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
+.preset {
+  height: 48px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.preset:hover { border-color: white; }
+
+.upload, #reset-btn {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  background: transparent;
+  color: white;
+  font-size: 0.85rem;
+  text-align: center;
+  cursor: pointer;
+}
+.upload:hover, #reset-btn:hover { background: rgba(255, 255, 255, 0.15); }
