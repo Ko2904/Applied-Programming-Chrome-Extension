@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-01",
+  "date": "2026-10-02",
   "items": [
     {
-      "headline": "Legacy AMCs show resilience as market volatility tests funds | Stock Market News",
-      "summary": "Summary A Mint analysis of six mutual fund categories shows that legacy fund houses outperformed newer asset management companies in four of the six categories Established mutual fund houses have outperformed newer rivals in several categories over the past year, braving market volatility with de...",
+      "headline": "The Japanese Yen spikes on softer US inflation and gives the gain back | FXStreet",
+      "summary": "USD/JPY dips below 156.50 on US inflation and closes back near 157.50.October Fed hike odds cut by about a third after the release.Tokyo core inflation due Thursday, forecast at 2.4% from 1.8%.Softer US inflation pulled October Fed hike odds down to near 35%, and USD/JPY fell below 156.50 on the ...",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/the-japanese-yen-spikes-on-softer-us-inflation-and-gives-the-gain-back-202610010000"
+    },
+    {
+      "headline": "Inflation comes in cooler than expected. Diesel could change that",
+      "summary": "STORY: :: Dan Burns, US Economics Editor :: September 30, 2026 \"It appears that not a lot can slow down this economy. Not a war, not high oil prices, not a lot of predictions that consumers would roll over in the face of stiff prices and inflation.",
+      "source": "Market Screener",
+      "url": "https://www.marketscreener.com/news/inflation-comes-in-cooler-than-expected-diesel-could-change-that-ce785ad3da8bf023"
+    },
+    {
+      "headline": "Mexican Peso Becomes World's Worst as Carry Traders Flee | Stock Market News",
+      "summary": "Analysts are rushing to cut their year-end forecasts for the Mexican peso after it underperformed every other major currency over the past month. (Bloomberg) -- Lea en español Analysts are rushing to cut their year-end forecasts for the Mexican peso after it underperformed every other major curre...",
       "source": "mint",
-      "url": "https://www.livemint.com/market/old-vs-new-mutual-funds-in-india-11790660275511.html"
-    },
-    {
-      "headline": "Uranium Energy earnings missed by $0.08, revenue topped estimates By Investing.com",
-      "summary": "Investing.com - Uranium Energy (NYSE: UEC) reported fourth quarter EPS of $-0.120, $0.08 worse than the analyst estimate of $-0.038. Revenue for the quarter came in at $17.1M versus the consensus estimate of $6.71M.",
-      "source": "Investing.com",
-      "url": "https://www.investing.com/news/earnings/uranium-energy-earnings-missed-by-008-revenue-topped-estimates-4923917"
-    },
-    {
-      "headline": "U.S. Stock Market Prediction for Wednesday, September 30: S&P 500, Dow Jones, Nasdaq, Russell 2000 look to close month on positive note, factors to watch out",
-      "summary": "U.S Stock Market today: Traders now see about a 50-50 chance of quarter-point rate hike at the Fed's upcoming meeting in October, based on pricing of Fed funds futures contracts, down from nearly 70% earlier in the day. Wall Street investors will be eyeing a positive rebound on Wednesday after st...",
-      "source": "Economic Times",
-      "url": "https://economictimes.indiatimes.com/news/international/us/u-s-stock-market-prediction-for-wednesday-september-30-sp-500-dow-jones-nasdaq-russell-2000-look-to-close-month-on-positive-note-factors-to-watch-out/articleshow/134576766.cms"
+      "url": "https://www.livemint.com/market/mexican-peso-becomes-world-s-worst-as-carry-traders-flee-11790812705494.html"
     }
   ]
 }
